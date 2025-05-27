@@ -1,0 +1,41 @@
+def start_game():
+    print("🚀 Welcome to 'Mission to Planet X'!")
+    print("You are the commander of a spaceship exploring a new galaxy.")
+    print("Your ship approaches Planet X, an unknown world.")
+    print("Do you want to LAND on the planet or SCAN it from orbit?")
+
+    choice1 = input("Type 'land' or 'scan': ").lower()
+
+    if choice1 == "land":
+        land_on_planet()
+    elif choice1 == "scan":
+        scan_planet()
+    else:
+        print("⚠️ Invalid choice. Mission aborted.")
+
+def land_on_planet():
+    print("\n🛬 You land safely on the surface.")
+    print("You see two paths: a CAVE glowing with light, and a MOUNTAIN trail.")
+    choice2 = input("Do you enter the 'cave' or climb the 'mountain'? ").lower()
+
+    if choice2 == "cave":
+        print("\n👽 Inside the cave, you meet peaceful aliens who give you ancient technology. 🏆 You Win!")
+    elif choice2 == "mountain":
+        print("\n🌩️ A storm strikes the mountain. You lose communication and your mission fails. Game over.")
+    else:
+        print("⚠️ Invalid choice. Mission failed.")
+
+def scan_planet():
+    print("\n📡 Scanning reveals strange signals coming from a crashed ship.")
+    print("Do you INVESTIGATE the signal or IGNORE it and move on?")
+    choice3 = input("Type 'investigate' or 'ignore': ").lower()
+
+    if choice3 == "investigate":
+        print("\n🛰️ You find survivors and rescue them. The galaxy praises your bravery. 🏅 You Win!")
+    elif choice3 == "ignore":
+        print("\n🕳️ A hidden asteroid hits your ship as you leave. Game over.")
+    else:
+        print("⚠️ Invalid choice. Mission failed.")
+
+# Run the game
+start_game()
